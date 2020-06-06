@@ -1,0 +1,35 @@
+<%- include('partials/header'); -%>
+<h1>Add Customer</h1>
+<% if(errors != undefined){ %>
+    <ul>
+        <% errors.errors.forEach(function(error){ %>
+        <li> <%=error.msg %> </li>
+        <% }) %>
+    </ul>
+<% } %>
+<form action="/users/add" method="POST">
+    <label for="">First name</label><br>
+    <input type="text" name="fname">
+    <br>
+
+    <label for="">Last name</label><br>
+    <input type="text" name="lname">
+    <br>
+
+    <label for="">Email</label><br>
+    <input type="text" name="email">
+    <br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+<h1><%=title %></h1>
+<ul>
+    <% users.forEach(function(user){ %>
+    <li> <%=user.f_name %> <%=user.l_name %> - 
+        <a class="deleteUser" href="#" data-id="<%= user._id %>">Delete</a> 
+    </li>
+    <% }) %>
+</ul>
+
+<%- include('partials/footer'); -%>
