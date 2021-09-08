@@ -23,7 +23,7 @@ numpy==1.18.3
 packaging==20.3
 pandas==1.0.3
 pika==1.1.0
-Pillow==6.2.1
+Pillow==8.3.2
 pluggy==0.13.1
 psycopg2==2.8.4
 py==1.8.1
